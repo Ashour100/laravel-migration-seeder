@@ -9,12 +9,14 @@
             <div class="col-12 m-3 p-5">
                 <h1 class="text-center">Treni disponibili attualmente </h1>
             </div>
-            @foreach ($trains as $train)
+            @foreach ($trains as $key => $train)
                 <div class="col-4">
                     <div class="card p-3 m-2">
                         <div class="card-body">
                             <h5 class="card-title">
-                                Treno da {{ $train->Stazione_di_partenza}}, a {{ $train->Stazione_di_arrivo }}
+                                <a href="/{{$key}}">
+                                    Treno da {{ $train->Stazione_di_partenza}}, a {{ $train->Stazione_di_arrivo }}
+                                </a>
                             </h5>
                             <p class="card-text">
                                 Azienda: {{ $train->Azienda }} <br>
