@@ -12,8 +12,9 @@ class TrainController extends Controller
     return view('guest.trains',['trains'=>$trains]);
     }
     
-    public function show(train $train)
+    public function show($id)
     {
+        $train= train::findOrFail($id);
         return view('guest.show', ["train" => $train]);
     }
 }

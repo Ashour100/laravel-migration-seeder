@@ -14,7 +14,7 @@
                     <div class="card p-3 m-2">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="/{{$key}}">
+                                <a href="/{{$key+1}}">
                                     Treno da {{ $train->Stazione_di_partenza}}, a {{ $train->Stazione_di_arrivo }}
                                 </a>
                             </h5>
